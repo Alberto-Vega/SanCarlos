@@ -38,16 +38,14 @@ class ActivitiesTableViewController: UITableViewController {
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("ActivityListItem", forIndexPath: indexPath)
     let index = indexPath.row
-    let selectedActivities = self.activities[index]
+    let selectedActivity = self.activities[index]
     let activityNameTextLabel = cell.viewWithTag(1) as! UILabel
-    activityNameTextLabel.text = selectedActivities.name
+    activityNameTextLabel.text = selectedActivity.name
     return cell
   }
   
   func createActivities()-> [Activity] {
-    
-//    var activities = [Activity]()
-    
+        
     var boatRides = Activity()
     boatRides.name = "Boat Rides"
     boatRides.image = UIImage(named: "boatRides.JPG")
@@ -91,20 +89,19 @@ class ActivitiesTableViewController: UITableViewController {
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "ShowDetailViewController" {
-      if let dvc: DetailViewController = segue.destinationViewController as? DetailViewController {
+      if let dvc = segue.destinationViewController as? DetailViewController {
       
-      if let indexPath = self.tableView.indexPathForSelectedRow {
-       let selectedRow = indexPath.row
+       let indexPath = self.tableView.indexPathForSelectedRow
+        if let selectedRow = indexPath?.row {
        let selectedActivity = self.activities[selectedRow]
         print("the selected library in table view: \(selectedActivity.name)")
       dvc.selectedActivity = selectedActivity
         dvc.praise = praise
+        }
       }
       }
 //         Get the new view controller using segue.destinationViewController.
 //         Pass the selected object to the new view controller.
+    
     }
-    }
-
-
 }

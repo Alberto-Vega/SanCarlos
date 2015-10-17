@@ -8,7 +8,7 @@
 
 import UIKit
 
-class adventures: PointOfInterest {
+class Adventure: PointOfInterest {
   var experience: String
   var details: String
   var preparations: String

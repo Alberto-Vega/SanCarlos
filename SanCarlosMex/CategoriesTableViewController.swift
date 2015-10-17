@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ActivitiesTableViewController: UITableViewController {
+class CategoriesTableViewController: UITableViewController {
 
   @IBOutlet var mainMenuTableView: UITableView!
+  
   var activities = [Activity]()
-  var praise = "You are really good at this"
+  var restaurants = [Restaurant]()
+  var beaches = [Beach]()
+  var hotels = [Hotel]()
+  var adventures = [Adventure]()
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,7 +100,6 @@ class ActivitiesTableViewController: UITableViewController {
        let selectedActivity = self.activities[selectedRow]
         print("the selected library in table view: \(selectedActivity.name)")
       dvc.selectedActivity = selectedActivity
-        dvc.praise = praise
         }
       }
       }

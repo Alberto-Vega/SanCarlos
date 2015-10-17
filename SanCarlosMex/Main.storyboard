@@ -203,7 +203,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="96o-Fs-8lc" kind="show" id="Z4D-Xg-gJZ"/>
+                                    <segue destination="96o-Fs-8lc" kind="show" id="fpt-17-okT"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tetakawiSquare1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MuI-wY-b2S">
@@ -243,6 +243,7 @@
                             <constraint firstAttribute="centerX" secondItem="0DW-Mz-Lu9" secondAttribute="centerX" id="rJi-9y-LIc"/>
                             <constraint firstItem="MuI-wY-b2S" firstAttribute="top" secondItem="1FD-sW-onn" secondAttribute="top" constant="182" id="xmj-jc-sLS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0DW-Mz-Lu9" secondAttribute="trailing" constant="-502" id="yBS-yV-pCt"/>
+                            <constraint firstItem="MuI-wY-b2S" firstAttribute="centerX" secondItem="GNA-jM-1Xl" secondAttribute="centerX" id="z4z-Yw-78U"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -250,12 +251,19 @@
                                 <exclude reference="qLX-NN-dug"/>
                                 <exclude reference="LQ5-UZ-Ubl"/>
                                 <exclude reference="Pfb-Ry-PRq"/>
+                                <exclude reference="z4z-Yw-78U"/>
                                 <exclude reference="8wH-Zq-LVZ"/>
                                 <exclude reference="CHK-uf-zuY"/>
                                 <exclude reference="HKC-WP-hi3"/>
                                 <exclude reference="Q9s-XX-GiL"/>
                                 <exclude reference="d9e-Fq-DBd"/>
                                 <exclude reference="rJi-9y-LIc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="bwm-C4-YE1"/>
+                                <include reference="z4z-Yw-78U"/>
                             </mask>
                         </variation>
                     </view>
@@ -268,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="-258" y="390"/>
         </scene>
-        <!--Activities Table View Controller-->
+        <!--Categories Table View Controller-->
         <scene sceneID="sJb-tZ-RVA">
             <objects>
-                <tableViewController id="hRr-g7-vkg" customClass="ActivitiesTableViewController" customModule="SanCarlosMex" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hRr-g7-vkg" customClass="CategoriesTableViewController" customModule="SanCarlosMex" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tgb-87-mMZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
